@@ -1,8 +1,8 @@
-const dueNext = (equipJsonArray) => { // array buider with filter
+const dueNext = (equipJsonArray) => { // returns array built with filter with equips changes due next month
     return equipJsonArray.filter(checkEquipDueNext);
 }
 
-const changeExpired = (equipJsonArray) => { // array builder with filter
+const changeExpired = (equipJsonArray) => { // returns arraya built with filter with late equips, only will be needed to run once , in the first run?
     return equipJsonArray.filter(checkEquipLate);
 }
 
