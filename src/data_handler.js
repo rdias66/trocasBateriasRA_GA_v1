@@ -1,4 +1,4 @@
-const invalidDates = []; //local array for invalid date equips
+const invalidDates = []; //local array for invalid date equips, this must be saved on data folder
 
 const returnInvalidDates = () =>{ //returns array of invalid date equips
     return this.invalidDates;
@@ -32,3 +32,5 @@ const expirationDateValue = () => {//static method for fixed value
     let expirationDateValue = dueChangeValue - lastChangeValue;
     return expirationDateValue;
 }
+
+export {returnInvalidDates, arrayWithSettedDates}
