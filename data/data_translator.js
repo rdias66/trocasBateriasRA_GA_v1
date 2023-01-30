@@ -1,3 +1,6 @@
+import returnInvalidDates from 'src/data_handler.js';
+
+const invalidDates = returnInvalidDates();
 
 const jsonExample = { //todos setados para string inicialmente mas sua versão final está explicita dentro do valor
   sequencial: 'Number', 
