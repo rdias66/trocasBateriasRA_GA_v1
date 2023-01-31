@@ -25,11 +25,7 @@ const checkEquipLate = (equipJson) => { //checks if there are expired exchanges,
     }
 }
 
-const oneMonthValue = () => { //static method for fixed value
-    const date1 = new Date("2020-01-01");
-    const date1MonthLater = new Date("2020-02-01");
-    const date1Value = date1.getTime();
-    const date1MonthLaterValue = date1MonthLater.getTime();
-    const oneMonthValue = date1MonthLaterValue - date1Value;
-    return oneMonthValue;
+const oneMonthValue = () => { //static method for fixed month value in ms
+    const oneMonthInMs = 30 * 24 * 60 * 60 * 1000;
+    return oneMonthInMs;
 }
