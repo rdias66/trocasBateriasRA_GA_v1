@@ -10,7 +10,7 @@ const worksheet = workbook.Sheets[workbook.SheetNames[0]];
 
 const XSLjsonArray = [];
 
-XSLjsonArray =  XLSX.utils.sheet_to_json(worksheet, opts);
+XSLjsonArray =  XLSX.utils.sheet_to_json(worksheet);
 
 const jsonExample = { //todos setados para string inicialmente mas sua versão final está explicita dentro do valor
   sequencial: 'Number', 
@@ -21,5 +21,3 @@ const jsonExample = { //todos setados para string inicialmente mas sua versão f
   data_ultima_troca: 'Date',
   data_proxima_troca: 'Date'
 }
-
-
