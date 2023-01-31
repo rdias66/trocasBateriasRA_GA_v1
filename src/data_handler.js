@@ -25,7 +25,7 @@ const validateEquipDate = (equipJson) => { //validates if equip has a setted las
     return false;
 }
 
-const expirationDateValue = () => {//static method for fixed value
+const expirationDateValue = () => {//CHANGE THIS FOR THE SAME PATTERN IN THE ONE MONTH FUNCTION IN FUNCTIONS
     const lastChange = new Date("2020-01-01");
     const dueChange = new Date("2023-01-01");
     const lastChangeValue = lastChange.getTime();
