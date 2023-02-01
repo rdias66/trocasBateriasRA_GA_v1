@@ -16,3 +16,5 @@ const options = {
 };
 
 const XSLjsonArray = XLSX.utils.sheet_to_json(worksheet, options);
+
+export {XSLjsonArray, invalidDates}
