@@ -1,8 +1,8 @@
-const dueNext = (equipJsonArray) => { // returns array built with filter with equips changes due next month
+const dueNextArray = (equipJsonArray) => { // returns array built with filter with equips changes due next month
     return equipJsonArray.filter(checkEquipDueNext);
 }
 
-const changeExpired = (equipJsonArray) => { // returns arraya built with filter with late equips, only will be needed to run once , in the first run?
+const changeExpiredArray = (equipJsonArray) => { // returns arraya built with filter with late equips, only will be needed to run once , in the first run?
     return equipJsonArray.filter(checkEquipLate);
 }
 
@@ -29,3 +29,5 @@ const oneMonthValue = () => { //static method for fixed month value in ms
     const oneMonthInMs = 30 * 24 * 60 * 60 * 1000;
     return oneMonthInMs;
 }
+
+export {dueNextArray, changeExpiredArray}
