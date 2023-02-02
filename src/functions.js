@@ -26,8 +26,7 @@ const checkEquipLate = (equipJson) => { //checks if there are expired exchanges,
 }
 
 const oneMonthValue = () => { //static method for fixed month value in ms
-    const oneMonthInMs = 30 * 24 * 60 * 60 * 1000;
-    return oneMonthInMs;
+    return new Date("2023-02-01").getTime() - new Date("2023-01-01").getTime();//1 month difference in milliseconds
 }
 
 export {dueNextArray, changeExpiredArray}
