@@ -10,6 +10,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "read-excel-file": "^5.5.3"
+    "nodemailer": "^6.9.1",
+    "read-excel-file": "^5.5.3",
+    "xslx": "^1.0.0"
   }
 }
