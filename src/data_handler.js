@@ -10,8 +10,14 @@ const arrayWithSettedDates = (equipJsonArray) => {//returns array with valid equ
 
 const setExpirationDate = (equipJson) => { //sets expiration date on valid equips and adds the invalid ones on local array
      if(validateEquipDate(equipJson)){
-        equipJson.data_proxima_troca =  equipJson.data_ultima_troca.getTime() + expirationDateValue();
-        return equipJson;   //not gonna work like this, value must be transformed back to date
+        equipJson.data_proxima_troca = new Date(equipJson.data_ultima_troca.getTime() + expirationDateValue());
+        const options = {
+             year: "numeric",
+             month: "2-digit",
+             day: "2-digit"
+        };
+        equipJson.data_proxima_troca = equipJson.data_proxima_troca.toLocaleDateString("en-US", options);
+        return equipJson;
     } else {
         invalidDates.push(equipJson);
     }   
