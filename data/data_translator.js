@@ -1,6 +1,6 @@
 //npm install xlsx
 //npm i --save https://cdn.sheetjs.com/xlsx-0.19.2/xlsx-0.19.2.tgz
-const XLSX = require("xlsx");
+import XLSX from 'xlsx';
 const workbook = XLSX.readFile("./data/Trocas_Bateria_RAs_GAs.xlsx");
 const worksheet = workbook.Sheets[workbook.SheetNames[0]];
 const options = {
