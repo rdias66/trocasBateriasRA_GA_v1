@@ -6,6 +6,6 @@ const worksheet = workbook.Sheets[workbook.SheetNames[0]];
 const options = {
   header: 1
 };
-const XSLjsonArray = XLSX.utils.sheet_to_json(worksheet, options);
+const XLSXjsonArray = XLSX.utils.sheet_to_json(worksheet, options);
 
-export default XSLjsonArray;
+export default XLSXjsonArray;
