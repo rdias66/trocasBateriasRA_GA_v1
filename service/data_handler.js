@@ -25,7 +25,7 @@ const setExpirationDate = (equipJson) => { //sets expiration date on valid equip
 
 const validateEquipDate = (equipJson) => { //validates if equip has a setted last Change date
     const equipLastChangeValue = equipJson.data_ultima_troca;
-    if(equipLastChange !== null){ 
+    if(equipLastChangeValue !== null){ 
         return true;
     }
     return false;
