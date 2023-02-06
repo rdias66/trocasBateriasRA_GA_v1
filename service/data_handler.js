@@ -10,7 +10,7 @@ const arrayWithSettedDates = (equipJsonArray) => {//returns array with valid equ
 
 const setExpirationDate = (equipJson) => { //sets expiration date on valid equips and adds the invalid ones on local array
      if(validateEquipDate(equipJson)){
-        equipJson.data_proxima_troca = new Date(equipJson.data_ultima_troca.getTime() + expirationDateValue());
+        equipJson.data_proxima_troca = new Date(equipJson.data_ultima_troca.getTime() + expirationDateValue()); //same pattern as the first date key
         const options = {
              year: "numeric",
              month: "2-digit",
@@ -24,8 +24,7 @@ const setExpirationDate = (equipJson) => { //sets expiration date on valid equip
 }
 
 const validateEquipDate = (equipJson) => { //validates if equip has a setted last Change date
-    const equipLastChangeValue = equipJson.data_ultima_troca;
-    if(equipLastChangeValue !== null){ 
+    if(equipJson.data_ultima_troca !== null){ 
         return true;
     }
     return false;
