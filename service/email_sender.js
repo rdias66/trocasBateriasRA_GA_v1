@@ -1,8 +1,6 @@
-//npm install nodemailer
-import {email, pass } from './src/local_data_email.js';
 
-
-const nodemailer = require('nodemailer');
+import {email, pass } from 'service/local_data_email.js'; //create this locally on run with credentials to executioner's email (rudimentary .env file)
+import nodemailer from 'nodemailer';
 
 const sendEquips = jsonArray => {
     async function sendEmail(jsonArray) {
