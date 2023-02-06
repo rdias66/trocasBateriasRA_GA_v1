@@ -1,4 +1,4 @@
-
+//need full test run, not tested at all
 import {email, pass } from 'service/local_email_data.js'; //create this locally on run with credentials to executioner's email (rudimentary .env file)
 import nodemailer from 'nodemailer';
 
