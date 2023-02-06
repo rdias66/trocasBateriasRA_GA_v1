@@ -1,7 +1,7 @@
-import {returnInvalidDates, arrayWithSettedDates} from './service/data_handler.js';
-import {dueNextArray, changeExpiredArray} from './service/functions.js';
+import {returnInvalidDates, arrayWithSettedDates} from './service/data_handler.js';//needs testing + debugging
+import {dueNextArray, changeExpiredArray} from './service/functions.js'; //needs testing + debugging
 import XLSXjsonArray from './data/data_translator.js'; //working
-//import sendEquips from 'src/email_sender.js';
+import sendEquips from './service/email_sender.js';//needs testing + debugging
 
 
 const handledDataJsonArray = arrayWithSettedDates(XLSXjsonArray);
