@@ -8,12 +8,10 @@ const handledDataJsonArray = arrayWithSettedDates(XLSXjsonArray);
 
 const invalidDates = returnInvalidDates();
 
-const equipsChangeDueNext = dueNextArray(handledDataJsonArray);
+const equipsDueNext = dueNextArray(handledDataJsonArray);
 
-const equipsChangeExpired = changeExpiredArray(handledDataJsonArray);
-console.log(handledDataJsonArray)
+const equipsExpired = changeExpiredArray(handledDataJsonArray);
+
 //sendEquips(equipsChangeDueNext);
-
-
 //text not formated on email, only sendind jsons
 
