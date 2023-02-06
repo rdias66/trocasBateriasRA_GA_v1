@@ -1,5 +1,5 @@
 
-import {email, pass } from 'service/local_data_email.js'; //create this locally on run with credentials to executioner's email (rudimentary .env file)
+import {email, pass } from 'service/local_email_data.js'; //create this locally on run with credentials to executioner's email (rudimentary .env file)
 import nodemailer from 'nodemailer';
 
 const sendEquips = jsonArray => {
