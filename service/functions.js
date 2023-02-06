@@ -7,7 +7,7 @@ const changeExpiredArray = (equipJsonArray) => { // returns arraya built with fi
 }
 
 const checkEquipDueNext = (equipJson) => { //checks if there will be exchanges expiring in the next month, made for filter usage
-    const expirationDateValue = equipJson.data_proxima_troca.getTime(); // needs data handled first
+    const expirationDateValue = equipJson.data_proxima_troca.getTime(); 
     const today = new Date();
     const todayValue = today.getTime();
     const limitForInaction = todayValue + oneMonthValue();
@@ -17,7 +17,7 @@ const checkEquipDueNext = (equipJson) => { //checks if there will be exchanges e
 }
 
 const checkEquipLate = (equipJson) => { //checks if there are expired exchanges, made for filter usage
-    const expirationDateValue = equipJson.data_proxima_troca.getTime(); // needs data handled first
+    const expirationDateValue = equipJson.data_proxima_troca.getTime();
     const today = new Date();
     const todayValue = today.getTime();
     if(expirationDateValue < todayValue){
