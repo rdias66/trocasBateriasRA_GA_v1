@@ -1,9 +1,3 @@
-const invalidDates = []; //local array for invalid date equips, this must be saved on data folder
-
-const returnInvalidDates = () =>{ //returns array of invalid date equips
-    return this.invalidDates;
-}
-
 const arrayWithSettedDates = (equipJsonArray) => {//returns array with valid equips with the setted expiration dates
     return equipJsonArray.filter(setExpirationDate); 
 }
@@ -18,16 +12,7 @@ const setExpirationDate = (equipJson) => { //sets expiration date on valid equip
         };
         equipJson.data_proxima_troca = equipJson.data_proxima_troca.toLocaleDateString("en-US", options);
         return equipJson;
-    } else {
-        invalidDates.push(equipJson);
-    }   
-}
-
-const validateEquipDate = (equipJson) => { //validates if equip has a setted last Change date
-    if(equipJson.data_ultima_troca !== null){ 
-        return true;
-    }
-    return false;
+    } 
 }
 
 const expirationDateValue = () => {
@@ -35,4 +20,4 @@ const expirationDateValue = () => {
 };
 
 
-export {returnInvalidDates, arrayWithSettedDates}
+export default arrayWithSettedDates;
