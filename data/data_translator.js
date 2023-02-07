@@ -13,8 +13,7 @@ const XLSXjsonArray = dataArray.filter(equipJson => { //rebuilds the array, tran
   });
 
 const isEmpty = key => {
-         const isEmpty = key !== null ? true : false;
-         return isEmpty;
+         return isEmpty = key !== null ? true : false;
 }
 
 export {XLSXjsonArray , invalidDatesArray};
