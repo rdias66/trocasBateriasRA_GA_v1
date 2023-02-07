@@ -4,7 +4,7 @@ const worksheet = workbook.Sheets[workbook.SheetNames[0]];
 const dataArray = XLSX.utils.sheet_to_json(worksheet);
 
 const XLSXjsonArray = dataArray.map(equipJson => {
-         equipJson.DataUltimaTroca = new Date(equipJson.DataUltimaTroca.replaceAll("/","-"));
+         equipJson.data_ultima_troca = new Date(equipJson.data_ultima_troca.replaceAll("/","-"));
          return equipJson;
   });
 
