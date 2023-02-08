@@ -3,7 +3,7 @@ Projeto para automatização de notificações de trocas de baterias de equipame
 
 Projeto desenvolvido para automatização da verificação de quais equipamentos listados na planilha(funciona como banco de dados) necessitam do tramite de trocas de bateria iniciado.
 Primeiro transformamos a planilha em um array de jsons, lidamos com a data, aplicamos a regra de negocio, formatamos o email para envio ao responsavel, e enviamos o email com 
-as trocas a serem feitas no proximo mes, e os equipamentos com invalidades em seus dados.
+as trocas a serem feitas no proximo mes, e os equipamentos com invalidações em seus dados.
 Para funcionamento da feature de envio de email um arquivo chamado local_email_data.js deve ser criado com um json do seguinte formato:
 {
   email: 'user email',
