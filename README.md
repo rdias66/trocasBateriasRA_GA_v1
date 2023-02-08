@@ -36,7 +36,7 @@ For the email feature, the code needs a file created locally on the service fold
 General planning and incoming updates:
 - Email feature to be debugged and fully implemented.
 - .env file method of validation and security to be added as a substitute to the local_data_email.js json
-- Functions only necessary on the first run to be organized in a own .js file, them being; the invalid dates filtering and the expired replacements
+- Functions only necessary on the first run to be organized in their own .js file. Them being: the invalid dates filtering and the expired replacements
 - Generic first version on a front-end to be made.
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
