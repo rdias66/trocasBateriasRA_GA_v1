@@ -16,6 +16,7 @@ Planejamento geral e atualizações vindouras:
 - Funções que serão necessárias apenas na primeira vez que o código roda serão organizadas em um arquivo .js próprio, elas sendo; o filtro de datas inválidas e as trocas vencidas
 - Primeira versão genérica de um front end a ser feito.
 - Aplicação de diversas funcionalidades de tratamento de dados de planilhas e direcionamento de tarefas a ser desenvolvida de acordo com necessidades do utilizador.
+- Nivel mais alto e filtro de menu será aplicado. Essa aplicação se tornará uma feature em outro programa
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Para dúvidas e sugestões por favor contate: dias.a@live.com 
@@ -40,6 +41,7 @@ General planning and incoming updates:
 - Functions only necessary on the first run to be organized in their own .js file. Them being: the invalid dates filtering and the expired replacements
 - Generic first version on a front-end to be made.
 - Application of multiple utilities of data treatment in Sheet files and forwarding of tasks to be developed in paring with users needs.
+- Higher level and menu filtering to be applied. This application will become a feature of another program.
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 For doubts and suggestions please contact: dias.a@live.com 
