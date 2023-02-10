@@ -15,6 +15,7 @@ Planejamento geral e atualizações vindouras:
 - Método de validação e segurança .env file à ser adcionado para substituir o local_email_data json
 - Funções que serão necessárias apenas na primeira vez que o código roda serão organizadas em um arquivo .js próprio, elas sendo; o filtro de datas inválidas e as trocas vencidas
 - Primeira versão genérica de um front end a ser feito.
+- Aplicação de diversas funcionalidades de tratamento de dados de planilhas e direcionamento de tarefas a ser desenvolvida de acordo com necessidades do utilizador.
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Para dúvidas e sugestões por favor contate: dias.a@live.com 
@@ -38,6 +39,7 @@ General planning and incoming updates:
 - .env file method of validation and security to be added as a substitute to the local_data_email.js json
 - Functions only necessary on the first run to be organized in their own .js file. Them being: the invalid dates filtering and the expired replacements
 - Generic first version on a front-end to be made.
+- Application of multiple utilities of data treatment in Sheet files and forwarding of tasks to be developed in paring with users needs.
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 For doubts and suggestions please contact: dias.a@live.com 
