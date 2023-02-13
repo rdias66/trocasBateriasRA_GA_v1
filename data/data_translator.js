@@ -19,7 +19,7 @@ const isEmpty = key => {
          return isEmpty = key !== null ? true : false;
 }
 
-const jsonArrayToXLSX = (name, jsonArray) => {
+const createXLSXfileFrom = (jsonArray, sheetName) => {
          const workbook = xlsx.utils.book_new();
          const worksheet = xlsx.utils.json_to_sheet(jsonArray);
 
@@ -27,7 +27,7 @@ const jsonArrayToXLSX = (name, jsonArray) => {
   
          const buffer = xlsx.write(workbook, { type: 'buffer', bookType: 'xlsx' });
   
-         fs.writeFileSync(savePath + name, buffer); //
+         fs.writeFileSync(savePath + sheetName, buffer); //
 }
 
-export {XLSXjsonArray , invalidDatesArray, jsonArrayToXLSX };
+export {XLSXjsonArray , invalidDatesArray, createXLSXfileFrom };
