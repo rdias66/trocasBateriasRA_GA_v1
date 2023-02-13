@@ -16,4 +16,8 @@ const isEmpty = key => {
          return isEmpty = key !== null ? true : false;
 }
 
+const jsonArrayToXLSX = (name, dataArray) => {
+  
+}
+
 export {XLSXjsonArray , invalidDatesArray};
