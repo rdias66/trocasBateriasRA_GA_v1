@@ -19,15 +19,19 @@ const isEmpty = key => {
          return isEmpty = key !== null ? true : false;
 }
 
-const createXLSXfileFrom = (jsonArray, sheetName) => {
-         const workbook = xlsx.utils.book_new();
-         const worksheet = xlsx.utils.json_to_sheet(jsonArray);
+const createNewSheet = (jsonArray) => {
+          return worksheet = xlsx.utils.json_to_sheet(jsonArray);
+}
 
-         xlsx.utils.book_append_sheet(workbook, worksheet, name);
-  
+const newXLSXfile = (worksheetArray, sheetNames) => { //must put all json arrays into one array, and create a string array with the respective names for the each sheet
+         const workbook = xlsx.utils.book_new();
+         for(let i = 0; i<worksheetArray.length; i++){ //append each sheet(json array transformed in index) onto new xlsx file
+                 xlsx.utils.book_append_sheet(workbook, worksheetArray[i], sheetNames[i]);       
+         }
+         
          const buffer = xlsx.write(workbook, { type: 'buffer', bookType: 'xlsx' });
   
          fs.writeFileSync(savePath + sheetName, buffer); //
 }
 
-export {XLSXjsonArray , invalidDatesArray, createXLSXfileFrom };
+export {XLSXjsonArray , invalidDatesArray, newXLSXfile, createNewSheet };
