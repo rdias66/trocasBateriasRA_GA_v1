@@ -26,4 +26,4 @@ const sendEquips = jsonArray => {
   console.log('Message sent: %s', info.messageId);
 }
 
-export default sendEquips;
+//export send equips
