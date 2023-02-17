@@ -8,15 +8,17 @@ const invalidDatesArray = [];
 const savePath = './generatedSheets/'; // file path to be created on data section
 
 const XLSXjsonArray = dataArray.filter(equipJson => { //rebuilds the array, transforming the string dates into Date types, pushing invalid data into invalid dates array.
-         if(isEmpty(equipJson.data_ultima_troca)){
-         equipJson.data_ultima_troca = new Date(equipJson.data_ultima_troca.replaceAll("/","-")); //function built for an especific sheet
+         if(equipJson.data_ultima_troca != ' '){
+         equipJson.data_ultima_troca = new Date(fixDateFormat(equipJson.data_ultima_troca)); //function built for an especific sheet
          return equipJson;
          }
          invalidDatesArray.push(equipJson);
   });
 
-const isEmpty = key => {
-         return isEmpty = key !== null ? true : false;
+  function fixDateFormat(dateString){
+        dateString = dateString.trim();
+        let  localStringArraySeparation = dateString.split("/");
+        return localStringArraySeparation[1] + "-" + localStringArraySeparation[0] + "-" + localStringArraySeparation[2];
 }
 
 export {XLSXjsonArray , invalidDatesArray};
