@@ -1,14 +1,14 @@
 import XLSX from 'xlsx';
 import fs from 'fs';
 
-const workbook = XLSX.readFile("data/test_sheet.xlsx");
+const workbook = XLSX.readFile("data/db_equips.xlsx");
 const worksheet = workbook.Sheets[workbook.SheetNames[0]];
 const dataArray = XLSX.utils.sheet_to_json(worksheet);
 const invalidDatesArray = [];
 const savePath = './generatedSheets/'; // file path to be created on data section
 
 const XLSXjsonArray = dataArray.filter(equipJson => { //rebuilds the array, transforming the string dates into Date types, pushing invalid data into invalid dates array.
-         if(equipJson.data_ultima_troca != ' '){
+         if(equipJson.data_ultima_troca != undefined){
          equipJson.data_ultima_troca = new Date(fixDateFormat(equipJson.data_ultima_troca)); //function built for an especific sheet
          return equipJson;
          }
