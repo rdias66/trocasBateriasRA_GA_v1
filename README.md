@@ -1,15 +1,18 @@
 # trocasBateriasRA_GA_v1
+1- npm install
+2-local_email_data.js local
+{
+  email: 'user email',
+  pass: 'user password'
+}
+3- criação dos caminhos do arquivo xlsx
+-----
 Projeto para automatização de notificações de trocas de baterias de equipamentos Copel(CSL)
 
 Projeto desenvolvido para automatização da verificação de quais equipamentos listados na planilha(funciona como banco de dados) necessitam do tramite de trocas de bateria iniciado.
 Primeiro transformamos a planilha em um array de jsons, lidamos com a data, aplicamos a regra de negocio, formatamos o email para envio ao responsavel, e enviamos o email com 
 as trocas a serem feitas no proximo mes, e os equipamentos com invalidações em seus dados.
-Para funcionamento da feature de envio de email um arquivo chamado local_email_data.js deve ser criado com um json do seguinte formato:
-{
-  email: 'user email',
-  pass: 'user password'
-}
------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Planejamento geral e atualizações vindouras:
 - Funcionalidade do Email à ser debuggada e implementada completamente
 - Método de validação e segurança .env file à ser adcionado para substituir o local_email_data json
@@ -24,15 +27,15 @@ Para dúvidas e sugestões por favor contate: dias.a@live.com
 Obrigado!
 
 _______________________________________________________________________________________________________________________________________________________________________
-
-Project developed for the automation of the process of battery replacements on necessary equipments listed in a .xlsx file(works as the data base).
-First with transform the sheet to an json array, then the dates are handled, the rule of business is applied and the email is formatted and sent to the responsable with all of the necessary information, including pending(expired) replacements and invalid data.
-For the email feature, the code needs a file created locally on the service folder called local_email_data.js , with the following format:
-
+1- npm install
+2-local_email_data.js local
 {
   email: 'user email',
   pass: 'user password'
 }
+3- xlsx paths need to be setted
+Project developed for the automation of the process of battery replacements on necessary equipments listed in a .xlsx file(works as the data base).
+First with transform the sheet to an json array, then the dates are handled, the rule of business is applied and the email is formatted and sent to the responsable with all of the necessary information, including pending(expired) replacements and invalid data.
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 General planning and incoming updates:
