@@ -27,13 +27,13 @@ Para dúvidas e sugestões por favor contate: dias.a@live.com
 Obrigado!
 
 _______________________________________________________________________________________________________________________________________________________________________
-1- npm install
-2-local_email_data.js local
+- 1: npm install
+- 2: local_email_data.js local
 {
   email: 'user email',
   pass: 'user password'
 }
-3- xlsx paths need to be setted
+- 3: xlsx paths need to be setted
 Project developed for the automation of the process of battery replacements on necessary equipments listed in a .xlsx file(works as the data base).
 First with transform the sheet to an json array, then the dates are handled, the rule of business is applied and the email is formatted and sent to the responsable with all of the necessary information, including pending(expired) replacements and invalid data.
 
