@@ -1,11 +1,11 @@
 # trocasBateriasRA_GA_v1
-1- npm install
-2-local_email_data.js local
+- 1: npm install
+- 2: local_email_data.js local
 {
   email: 'user email',
   pass: 'user password'
 }
-3- criação dos caminhos do arquivo xlsx
+- 3: criação dos caminhos do arquivo xlsx
 -----
 Projeto para automatização de notificações de trocas de baterias de equipamentos Copel(CSL)
 
