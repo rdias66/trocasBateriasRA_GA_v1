@@ -38,6 +38,8 @@ Project developed for the automation of the process of battery replacements on n
 First with transform the sheet to an json array, then the dates are handled, the rule of business is applied and the email is formatted and sent to the responsable with all of the necessary information, including pending(expired) replacements and invalid data.
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Project developed for the automation of the process of battery replacements on necessary equipments listed in a .xlsx file(works as the data base). First with transform the sheet to an json array, then the dates are handled, the rule of business is applied and the email is formatted and sent to the responsable with all of the necessary information, including pending(expired) replacements and invalid data. 
 General planning and incoming updates:
 - Email feature to be debugged and fully implemented.
 - .env file method of validation and security to be added as a substitute to the local_data_email.js json
@@ -45,6 +47,7 @@ General planning and incoming updates:
 - Generic first version on a front-end to be made.
 - Application of multiple utilities of data treatment in Sheet files and forwarding of tasks to be developed in paring with users needs.
 - Higher level and menu filtering to be applied. This application will become a feature of another program.
+
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 For doubts and suggestions please contact: dias.a@live.com 
