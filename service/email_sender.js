@@ -1,29 +1,29 @@
 //need full test run, not tested at all
-import {email, pass } from 'service/local_email_data.js'; //create this locally on run with credentials to executioner's email (rudimentary .env file)
+//import {email, pass } from 'service/local_email_data.js'; //create this locally on run with credentials to executioner's email (rudimentary .env file)
 import nodemailer from 'nodemailer';
 
-const sendEquips = jsonArray => {
-    async function sendEmail(jsonArray) {
-        let transporter = nodemailer.createTransport({
-          host: 'smtp-mail.outlook.com',
-          port: 587,
-          secure: false,
-          auth: {
-            user: email,
-            pass: pass
-          }
-        });
-      
-    const info = await transporter.sendMail({
-        from: '"Rodrigo Dias" <dias.a@live.com>',
-        to: 'rodrigoa@copel.com',
-        subject: 'JSON Array',
-        text: JSON.stringify(jsonArray),
-        html: `<pre>${JSON.stringify(jsonArray, null, 2)}</pre>`
-      });
+
+const sendEquips = (jsonArray) => {
+  const mailTransporter = nodemailer.createTransport({
+    service: 'hotmail',
+    auth: {
+        user: 'dias.a@live.com',
+        pass: 'RodrigoDias666@ALMEIDA'
+    }
+  });
+  
+  const mailDetails = {
+    from: 'dias.a@live.com',
+    to: 'dias.a@live.com',
+    subject: 'Trocas do proximo mes',
+    text: JSON.stringify(jsonArray)
+  };
+  mailTransporter.sendMail(mailDetails, function(err, data) {
+  if(err) {
+      console.log('Error Occurs');
+  } else {
+      console.log('Email sent successfully');
   }
+});}
 
-  console.log('Message sent: %s', info.messageId);
-}
-
-//export send equips
+export default sendEquips;
