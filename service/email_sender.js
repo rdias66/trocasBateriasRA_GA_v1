@@ -3,7 +3,7 @@
 import nodemailer from 'nodemailer';
 
 
-const sendEquips = (jsonArray) => {
+const sendEquips = (equipsString) => {
   const mailTransporter = nodemailer.createTransport({
     service: 'hotmail',
     auth: {
@@ -16,7 +16,7 @@ const sendEquips = (jsonArray) => {
     from: 'dias.a@live.com',
     to: 'dias.a@live.com',
     subject: 'Trocas do proximo mes',
-    text: JSON.stringify(jsonArray)
+    text: equipsString
   };
   mailTransporter.sendMail(mailDetails, function(err, data) {
   if(err) {
@@ -26,4 +26,7 @@ const sendEquips = (jsonArray) => {
   }
 });}
 
-export default sendEquips;
+const formatText = (jsonArray) => {
+}
+
+export  {sendEquips , formatText};
