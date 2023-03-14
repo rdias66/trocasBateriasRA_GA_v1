@@ -14,7 +14,6 @@ Primeiro transformamos a planilha em um array de jsons, lidamos com a data, apli
 as trocas a serem feitas no proximo mes, e os equipamentos com invalidações em seus dados.
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Planejamento geral e atualizações vindouras:
-- Funcionalidade do Email à ser debuggada e implementada completamente
 - Método de validação e segurança .env file à ser adcionado para substituir o local_email_data json
 - Funções que serão necessárias apenas na primeira vez que o código roda serão organizadas em um arquivo .js próprio, elas sendo; o filtro de datas inválidas e as trocas vencidas
 - Primeira versão genérica de um front end a ser feito.
@@ -41,7 +40,6 @@ First with transform the sheet to an json array, then the dates are handled, the
 
 Project developed for the automation of the process of battery replacements on necessary equipments listed in a .xlsx file(works as the data base). First with transform the sheet to an json array, then the dates are handled, the rule of business is applied and the email is formatted and sent to the responsable with all of the necessary information, including pending(expired) replacements and invalid data. 
 General planning and incoming updates:
-- Email feature to be debugged and fully implemented.
 - .env file method of validation and security to be added as a substitute to the local_data_email.js json
 - Functions only necessary on the first run to be organized in their own .js file. Them being: the invalid dates filtering and the expired replacements
 - Generic first version on a front-end to be made.
