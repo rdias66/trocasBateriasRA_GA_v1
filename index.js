@@ -1,7 +1,7 @@
 import arrayWithSettedDates from './service/data_handler.js';///working
 import {dueNextArray, changeExpiredArray} from './service/functions.js'; //working
 import {XLSXjsonArray, invalidDatesArray} from './data/data_translator.js'; //working
-import sendEquips from './service/email_sender.js';
+import {sendEquips, formatText} from './service/email_sender.js'; //sender working, formatter not tested
 
 
 const handledDataJsonArray = arrayWithSettedDates(XLSXjsonArray);
@@ -18,7 +18,7 @@ console.log(equipsExpired.length);
 
 console.log(invalidDatesArray.length);
 
-const sender = sendEquips(equipsDueNext);
+const sender = sendEquips(formatText(equipsDueNext));
 
-//text not formated on email, only sendind jsons
+
 
