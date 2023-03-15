@@ -1,3 +1,5 @@
+const updatedArray = [];
+
 const dueNextArray = equipJsonArray => { // returns array built with filter with equips changes due next month
     return equipJsonArray.filter(checkEquipDueNext);
 }
@@ -12,7 +14,8 @@ const checkEquipDueNext = equipJson => { //checks if there will be exchanges exp
     const limitForInaction = today.getTime() + oneMonthValue();
     if(expirationDateValue<=limitForInaction && expirationDateValue > today.getTime()){
         return equipJson;
-    } 
+    }
+    updatedArray.push(equipJson);
 }
 
 const checkEquipLate = equipJson => { //checks if there are expired exchanges, made for filter usage
@@ -27,4 +30,4 @@ const oneMonthValue = () => { //static method for fixed month value in ms
     return new Date("2023-02-01").getTime() - new Date("2023-01-01").getTime();//1 month difference in milliseconds
 }
 
-export {dueNextArray, changeExpiredArray}
+export {dueNextArray, changeExpiredArray, updatedArray}
