@@ -10,9 +10,12 @@ const equipsDueNext = dueNextArray(handledDataJsonArray);
 
 const equipsExpired = changeExpiredArray(handledDataJsonArray);
 
-const createUpdatedXLSXfile = newXLSXfile(updatedArray, 'updated_db_sheet');
+const createUpdatedXLSXfile = newXLSXfile(updatedArray, 'updated_db_sheet.xlsx');
 
-const createSentEquipsXLSXfile = newXLSXfile(equipsDueNext, 'sent_objects_sheet'); 
+const createSentEquipsXLSXfile = newXLSXfile(equipsDueNext, 'sent_objects_sheet.xlsx'); 
+
+const createInvalidDatesXLSXfile = newXLSXfile(invalidDatesArray, 'invalid_dates_sheet.xlsx');
+
 
 const sender = sendEquips(formatText(equipsDueNext));
 
