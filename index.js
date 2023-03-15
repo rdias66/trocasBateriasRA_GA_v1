@@ -1,6 +1,6 @@
 import arrayWithSettedDates from './service/data_handler.js';///working
-import {dueNextArray, changeExpiredArray} from './service/functions.js'; //working
-import {XLSXjsonArray, invalidDatesArray} from './data/data_translator.js'; //working
+import {dueNextArray, changeExpiredArray, updatedArray} from './service/functions.js'; //working
+import {XLSXjsonArray, invalidDatesArray, newXLSXfile} from './data/data_translator.js'; //working
 import {sendEquips, formatText} from './service/email_sender.js'; //sender working, formatter not tested
 
 
@@ -10,13 +10,9 @@ const equipsDueNext = dueNextArray(handledDataJsonArray);
 
 const equipsExpired = changeExpiredArray(handledDataJsonArray);
 
-console.log(handledDataJsonArray.length);
+const createUpdatedXLSXfile = newXLSXfile(updatedArray, 'updated_db_sheet');
 
-console.log(equipsDueNext.length);
-
-console.log(equipsExpired.length);
-
-console.log(invalidDatesArray.length);
+const createSentEquipsXLSXfile = newXLSXfile(equipsDueNext, 'sent_objects_sheet'); 
 
 const sender = sendEquips(formatText(equipsDueNext));
 
