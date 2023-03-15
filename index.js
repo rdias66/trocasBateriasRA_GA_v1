@@ -12,6 +12,8 @@ const equipsExpired = changeExpiredArray(handledDataJsonArray);
 
 const createUpdatedXLSXfile = newXLSXfile(updatedArray, 'updated_db_sheet');
 
+const createSentEquipsXLSXfile = newXLSXfile(equipsDueNext, 'sent_objects_sheet'); 
+
 const sender = sendEquips(formatText(equipsDueNext));
 
 
