@@ -22,10 +22,10 @@ const XLSXjsonArray = dataArray.filter(equipJson => { //rebuilds the array, tran
 }
 
 const newXLSXfile = (jsonArray, sheetName) => { 
-         const workbook = xlsx.utils.book_new();
-         const worksheet = xlsx.utils.json_to_sheet(jsonArray);
-         xlsx.utils.book_append_sheet(workbook, worksheet, sheetName);            
-         const buffer = xlsx.write(workbook, { type: 'buffer', bookType: 'xlsx' })
+         const workbook = XLSX.utils.book_new();
+         const worksheet = XLSX.utils.json_to_sheet(jsonArray);
+         XLSX.utils.book_append_sheet(workbook, worksheet, sheetName);            
+         const buffer = XLSX.write(workbook, { type: 'buffer', bookType: 'xlsx' })
          fs.writeFileSync(savePath + sheetName, buffer); //
 }
 
