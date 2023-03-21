@@ -1,3 +1,7 @@
 node_modules/
 data/Trocas_Bateria_RAs_GAs.xlsx
-src/local_email_data.js
+src/local_email_data.js 
+data/updated_db_sheet.xlsx
+data/sent_objects_sheet.xlsx
+data/invalid_dates_sheet.xlsx
+data/db_sheet.xlsx
