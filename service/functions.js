@@ -15,6 +15,7 @@ const checkEquipDueNext = equipJson => { //checks if there will be exchanges exp
     if(expirationDateValue<=limitForInaction && expirationDateValue > today.getTime()){
         return equipJson;
     }
+    equipJson.data_ultima_troca = equipJson.data_ultima_troca.toString()
     updatedArray.push(equipJson);
 }
 

@@ -1,26 +1,28 @@
 //need full test run, not tested at all
 //import {email, pass } from 'service/local_email_data.js'; //create this locally on run with credentials to executioner's email (rudimentary .env file)
-import nodemailer from 'nodemailer';
+import dotenv  from 'dotenv';
+dotenv.config();
 
+import nodemailer from 'nodemailer';
 
 const sendEquips = (equipsString) => {
   const mailTransporter = nodemailer.createTransport({
-    service: 'hotmail',
+    service: process.env.EMAIL_SERVICE,
     auth: {
-        user: 'dias.a@live.com',
-        pass: 'RodrigoDias666@ALMEIDA'
+        user: process.env.EMAIL_ADRESS,
+        pass: process.env.EMAIL_PASSWORD,
     }
   });
   
   const mailDetails = {
-    from: 'dias.a@live.com',
-    to: 'dias.a@live.com',
-    subject: 'Trocas de bateria RA e GA do proximo mes (apartir de ~DIA DO SCRIPT~)',
+    from: process.env.EMAIL_ADRESS,
+    to: process.env.EMAIL_RECIEVER,
+    subject: 'Trocas de bateria RA e GA do proximo mes (apartir de 18/04/2023)',
     text: equipsString
   };
   mailTransporter.sendMail(mailDetails, function(err, data) {
   if(err) {
-      console.log('Error Occurs');
+      console.log(process.env.EMAIL_ADRESS);
   } else {
       console.log('Email sent successfully');
   }

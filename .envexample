@@ -1,0 +1,4 @@
+EMAIL_ADDRESS='email@email.com'
+EMAIL_PASSWORD='sending email password'
+EMAIL_RECIEVER='recievers email'
+EMAIL_SERVICE='sender service'
