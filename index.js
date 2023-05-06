@@ -16,7 +16,6 @@ const createSentEquipsXLSXfile = newXLSXfile(equipsDueNext, 'sent_objects_sheet.
 
 const createInvalidDatesXLSXfile = newXLSXfile(invalidDatesArray, 'invalid_dates_sheet.xlsx');
 
-
 const sender = sendEquips(formatText(equipsDueNext));
 
 
